@@ -1,6 +1,4 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://user-database:5432/user_db
   mail:
     host: "smtp.gmail.com"
     port: 587
