@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://user-database:5432/user_db
+  mail:
+    host: "smtp.gmail.com"
+    port: 587
+    username: space.epic00@gmail.com
+    password: nxwvjwkymtkeuvaw
+    properties:
+      mail:
+        smtp:
+          ssl:
+            protocols: TLSv1.2
+          starttls:
+            enable: true
+          auth: true
+  kafka:
+    consumer:
+      bootstrap-servers: ${BOOTSTRAP_SERVERS}
+      auto-offset-reset: earliest
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+        spring.json.value.default.type: eu.senla.notificationapi.dto.EmailNotificationDto
+        spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+    topics:
+      topic-email-notification: ${TOPIC_EMAIL_NOTIFICATION}
+    groups:
+      group-greeting-consumer: greeting-consumer

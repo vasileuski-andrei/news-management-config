@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://comment-database:5432/comment_db
+
+remote:
+  api-clients:
+    user-api:
+      baseUrl: http://user-service:8080/api/v1/users/
+      retry:
+        maxAttempts: 3
+        durationInSeconds: 2
+    news-api:
+      baseUrl: http://news-service:8081/api/v1/news/
+      retry:
+        maxAttempts: 3
+        durationInSeconds: 2
