@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc:postgresql://news-database:5432/news_db
+#    url: jdbc:postgresql://news-database:5432/news_db
+    url: jdbc:postgresql://localhost:5433/news_db
 
 remote:
   api-clients:
