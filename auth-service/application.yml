@@ -22,20 +22,20 @@ spring:
     topics:
       topic-email-notification: ${TOPIC_EMAIL_NOTIFICATION}
 
-  jwt:
-    secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
-    validity:
-      access-token: 60
-      refresh-token: 60
+jwt:
+  secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+  validity:
+    access-token: 60
+    refresh-token: 60
 
-  remote:
-    api-clients:
-      user-api:
-        baseUrl: http://user-service:8080/api/v1/users/
-        retry:
-          maxAttempts: 3
-          durationInSeconds: 2
+remote:
+  api-clients:
+    user-api:
+      baseUrl: http://user-service:8080/api/v1/users/
+      retry:
+        maxAttempts: 3
+        durationInSeconds: 2
 
-  maxmind:
-    geoip:
-      country-db: GeoLite2-Country.mmdb
+maxmind:
+  geoip:
+    country-db: GeoLite2-Country.mmdb
