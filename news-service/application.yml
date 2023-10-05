@@ -1,19 +1,20 @@
 spring:
   datasource:
-    url: jdbc:postgresql://news-database:5432/news_db
+#    url: jdbc:postgresql://news-database:5432/news_db
+    url: jdbc:postgresql://localhost:5433/news_db
 
-remote:
-  api-clients:
-    user-api:
-      baseUrl: http://user-service:8080/api/v1/users/
-      retry:
-        maxAttempts: 3
-        durationInSeconds: 2
-    comment-api:
-      baseUrl: http://comment-service:8080/api/v1/comments/
-      retry:
-        maxAttempts: 3
-        durationInSeconds: 2
-lucene:
-  path-fsdirectory: lucene/lucene
-  path-dictionary: lucene/dictionary/words.txt
+#remote:
+#  api-clients:
+#    user-api:
+#      baseUrl: http://user-service:8080/api/v1/users/
+#      retry:
+#        maxAttempts: 3
+#        durationInSeconds: 2
+#    comment-api:
+#      baseUrl: http://comment-service:8080/api/v1/comments/
+#      retry:
+#        maxAttempts: 3
+#        durationInSeconds: 2
+#lucene:
+#  path-fsdirectory: lucene/lucene
+#  path-dictionary: lucene/dictionary/words.txt
